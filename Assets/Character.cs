@@ -2,20 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+namespace PlayableCharacters
 {
-    public string name;
-    public int life = 1;
-    public int Life { get => Life; set => Life = value; }
-    public Character(string name)
+    public class Character 
     {
-        this.name = name;
-        Debug.Log("Hola soy "+name);
-    }
-    ~Character()
-    {
-        Debug.Log(name + "ha muerto");
-    }
+        private int kills;
+        public string name;
+        private int healthPoints = 1;
 
+        public Character(string name)
+        {
+            this.name = name;
+            
+            Debug.Log("Hola, soy " + name);
+        }
+        ~Character()
+        {
+            Debug.Log(name + " is dead");
+        }
+        public int HealthPoints { get => healthPoints; set => healthPoints = value; }
 
+    }
 }

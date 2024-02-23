@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class HelloWorld : MonoBehaviour
 {
+    Enemy e;
     // Start is called before the first frame update
     void Start()
     {
-        Enemy enemy = new Enemy("Voldemort",2,true);
-        Player player = new Player("HP", 4, true);
+        Debug.Log("Hello World");
+        e = new Enemy("Bob");
+        Player p = new Player("Pepe");
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Hello World");
-
+        Debug.Log("Nombre: " + e.name + ", Vida: " + e.HealthPoints);
     }
 }
