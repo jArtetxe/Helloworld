@@ -21,6 +21,5 @@ namespace PlayableCharacters
             Debug.Log(name + " is dead");
         }
         public int HealthPoints { get => healthPoints; set => healthPoints = value; }
-
     }
 }
