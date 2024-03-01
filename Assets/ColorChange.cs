@@ -17,6 +17,16 @@ public class ColorChange : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        ChangeColor();
+    }
+    private void ChangeColor()
+    {
         if(checkByTag){
             objetos = GameObject.FindGameObjectsWithTag(tag);
             foreach (GameObject objecto in objetos)
@@ -24,11 +34,5 @@ public class ColorChange : MonoBehaviour
                 objecto.GetComponent<MeshRenderer>().material.color = color;
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
