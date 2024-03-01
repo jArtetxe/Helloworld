@@ -1,22 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace Game{
-    public class HelloWorld : MonoBehaviour
-    {
-        Enemy e;
-        // Start is called before the first frame update
-        void Start()
-        {
-            Debug.Log("Hello World");
-            e = new Enemy("Bob");
-            Player p = new Player("Pepe");
-        }
 
-        // Update is called once per frame
-        void Update()
-        {
-            Debug.Log("Nombre: " + e.name + ", Vida: " + e.HealthPoints);
-        }
+namespace Game
+{
+
+public class HelloWorld : MonoBehaviour
+{
+        Enemy enemy;
+        Player player;
+    // Start is called before the first frame update
+    void Start()
+    {
+        enemy = new Enemy("Voldemort",2,true);
+        player = new Player("HP", 4, true);
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+            enemy.TakeDamage();
+            player.TakeDamage();
+
+            Debug.Log("Vida enemy: " + enemy.healthPoints + " vida player: " + player.healthPoints);
+
+    }
+}
 }
