@@ -21,7 +21,7 @@ public class Destroy : MonoBehaviour
 
     private void Destroys()
     {
-         if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Destroy(objeto[cont]);
             cont++;
